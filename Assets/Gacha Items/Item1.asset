@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de79c605aa450940a87ebf43791c404, type: 3}
+  m_Name: Item1
+  m_EditorClassIdentifier: 
+  itemName: Item 1
+  itemColor: {r: 0.5283019, g: 0.246707, b: 0.246707, a: 1}
+  choice1Text: {fileID: 4900000, guid: ef040bdb1b89b9647a1c04cc34899f49, type: 3}
+  choice1Result: {fileID: 4900000, guid: 212e8950d959861498074f1ea4e26f69, type: 3}
+  choice2Text: {fileID: 4900000, guid: bca1c5a1288c4124ea805dd3bff9e263, type: 3}
+  choice2Result: {fileID: 4900000, guid: 3e4e551df7c26d24eb754934f26864f3, type: 3}
+  choice3Text: {fileID: 4900000, guid: 24bc29e6a89d73f4889d8f4dc463fa62, type: 3}
+  choice3Result: {fileID: 4900000, guid: e7922c853416f884daffe9f337bea589, type: 3}
+  choice1change: -1
+  choice2Change: 0
+  choice3change: 1
