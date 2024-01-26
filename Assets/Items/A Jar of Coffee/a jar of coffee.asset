@@ -23,4 +23,4 @@ MonoBehaviour:
   choice3Result: {fileID: 4900000, guid: 2e1d8cdb2cd35174b9aae3a82d7be113, type: 3}
   choice1change: 0
   choice2Change: 0
-  choice3change: 0
+  choice3change: 1

@@ -2125,13 +2125,10 @@ MonoBehaviour:
   gachaScreenObj: {fileID: 1679618551}
   scoreDialogueObj: {fileID: 342935905}
   gachaItems:
-  - {fileID: 11400000, guid: 86ff06c634b7c244fb50de69556c8682, type: 2}
   - {fileID: 11400000, guid: 0974772d5e5fc6b469630e63d16f4352, type: 2}
   - {fileID: 11400000, guid: 4b2eda4c60f61c64a8f313079070b13b, type: 2}
-  - {fileID: 11400000, guid: fdd1bc97d0fd47a44b8e0b064f193571, type: 2}
   - {fileID: 11400000, guid: 1c42f2df1dce86246966ade4a9a38441, type: 2}
   - {fileID: 11400000, guid: 4ca8f21e4bcf55b4198e9275b6dd4ebd, type: 2}
-  - {fileID: 11400000, guid: 4b16f372a78e2bb419c3e697547bdbd4, type: 2}
   - {fileID: 11400000, guid: 4df7314ae76c2564ab552393c5b9e341, type: 2}
   - {fileID: 11400000, guid: 98c6fb001b1308e49bf8bcff9cbee732, type: 2}
   - {fileID: 11400000, guid: 360f7c05144e6be4c9b4e6a1af3b6a12, type: 2}
@@ -2139,13 +2136,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5e2f4adc5d35a2c4483f453a5add5f53, type: 2}
   - {fileID: 11400000, guid: b8be1e17aac31674fa3f61b1c4ac55b3, type: 2}
   - {fileID: 11400000, guid: 1b2214145ec15e442a48d4d666e9b3d1, type: 2}
-  - {fileID: 11400000, guid: ce82ea071321cea4eb335d54184dec55, type: 2}
   - {fileID: 11400000, guid: cfe8bf3571d26214599d0b2296944c07, type: 2}
   - {fileID: 11400000, guid: 69e18bb5a416f6546a3c1d13ea252313, type: 2}
   - {fileID: 11400000, guid: ee84bfdaa96f92c4dbf725e86f0ddb1e, type: 2}
   - {fileID: 11400000, guid: 9ea7d9304b7ec634e9998e0b9a8ee526, type: 2}
   - {fileID: 11400000, guid: 72f47795c031c144584e3b6b064f37c9, type: 2}
-  - {fileID: 11400000, guid: aa66b8e1e5cd3ab49a1b24f3ecfdd58f, type: 2}
   - {fileID: 11400000, guid: 7ba08bf2b2ee7704c8adc5c856835504, type: 2}
   - {fileID: 11400000, guid: e7fdb5f6d08450d4888c72a84c74e006, type: 2}
   - {fileID: 11400000, guid: 2f1480c45ba526a4794aba42b77b2e2c, type: 2}
@@ -2180,7 +2175,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c0ffbd3e380f87448b76a7e1204d303, type: 2}
   - {fileID: 11400000, guid: 282da0c1866add44799f10d6ff8f66b6, type: 2}
   - {fileID: 11400000, guid: 28a963afe4a67d346b2cc6da728b337b, type: 2}
-  - {fileID: 11400000, guid: f6302b5b8dad7894cbdbce34f5c9d002, type: 2}
   - {fileID: 11400000, guid: c6e47bc2822ff164498bd9a2a8758f22, type: 2}
   - {fileID: 11400000, guid: c286eb6fc0c41c84c87cf17edf8b2e79, type: 2}
   - {fileID: 11400000, guid: d0d139e5ce6f9bd4e803b6e51d0cdabb, type: 2}
