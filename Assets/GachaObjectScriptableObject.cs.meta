@@ -3,7 +3,14 @@ guid: 8de79c605aa450940a87ebf43791c404
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  - choice1Text: {instanceID: 0}
+  - choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
+  - choice2Text: {instanceID: 0}
+  - choice2Result: {fileID: 4900000, guid: b22980b13b8c2bf4ca08482f282893c3, type: 3}
+  - choice3Text: {instanceID: 0}
+  - choice3Result: {fileID: 4900000, guid: 2e1d8cdb2cd35174b9aae3a82d7be113, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

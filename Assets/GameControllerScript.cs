@@ -16,7 +16,7 @@ public class GameControllerScript : MonoBehaviour
     private bool gachaScreenOn = true;
 
     private rollingTextTyperScript mainDialogueComponent;
-    private Image gachaScreenImageComponent;
+    private Image gachaScreenImageComponent, itemImageComponent;
 
     private TextMeshProUGUI mainDialogueText,button1Text,button2Text,button3Text,gachaTextComponent,scoreDialogueText;
     // Start is called before the first frame update
@@ -24,6 +24,7 @@ public class GameControllerScript : MonoBehaviour
     {
         mainDialogueComponent = mainDialogueObj.GetComponent<rollingTextTyperScript>();
         gachaScreenImageComponent = gachaScreenImageObj.GetComponent<Image>();
+        itemImageComponent = itemImageObj.GetComponent<Image>();
         mainDialogueText=mainDialogueObj.GetComponent<TextMeshProUGUI>();
         button1Text = button1TextObj.GetComponent<TextMeshProUGUI>();
         button2Text = button2TextObj.GetComponent<TextMeshProUGUI>();
@@ -31,9 +32,9 @@ public class GameControllerScript : MonoBehaviour
         scoreDialogueText = scoreDialogueObj.GetComponent<TextMeshProUGUI>();
         gachaTextComponent = gachaTextObj.GetComponent<TextMeshProUGUI>();
         gachaRoll();
-        gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
-        gachaScreenImageComponent.color = currentItem.itemColor;
-        itemImageObj.GetComponent<Image>().color = currentItem.itemColor;
+        //gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
+        //gachaScreenImageComponent.color = currentItem.itemColor;
+        //itemImageObj.GetComponent<Image>().color = currentItem.itemColor;
     }
 
     // Update is called once per frame
@@ -57,9 +58,7 @@ public class GameControllerScript : MonoBehaviour
             gachaRoll();
             gachaScreenOn = true;
             gachaScreenObj.SetActive(true);
-            gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
-            gachaScreenImageComponent.color = currentItem.itemColor;
-            itemImageObj.GetComponent<Image>().color = currentItem.itemColor;
+            //itemImageObj.GetComponent<Image>().color = currentItem.itemColor;
         }
 
         scoreDialogueText.text = oldManScore.ToString();
@@ -100,5 +99,8 @@ public class GameControllerScript : MonoBehaviour
     public void gachaRoll()
     {
         currentItem = gachaItems[Random.Range(0, gachaItems.Length)];
+        gachaScreenImageComponent.sprite = currentItem.ItemSprite;
+        itemImageComponent.sprite = currentItem.ItemSprite;
+        gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
     }
 }

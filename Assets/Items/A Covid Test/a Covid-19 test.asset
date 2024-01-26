@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de79c605aa450940a87ebf43791c404, type: 3}
+  m_Name: a Covid-19 test
+  m_EditorClassIdentifier: 
+  itemName: a Covid-19 test
+  itemColor: {r: 1, g: 1, b: 1, a: 1}
+  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  choice1Text: {fileID: 4900000, guid: 31e1ee63e6286e94b8b056bb11c3fec4, type: 3}
+  choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
+  choice2Text: {fileID: 4900000, guid: 8b861e8ab80520f41a82745508551973, type: 3}
+  choice2Result: {fileID: 4900000, guid: b22980b13b8c2bf4ca08482f282893c3, type: 3}
+  choice3Text: {fileID: 4900000, guid: eb33ea9285cdb1b499bc25d912759319, type: 3}
+  choice3Result: {fileID: 4900000, guid: 2e1d8cdb2cd35174b9aae3a82d7be113, type: 3}
+  choice1change: 0
+  choice2Change: 0
+  choice3change: 0

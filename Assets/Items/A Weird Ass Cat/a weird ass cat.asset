@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de79c605aa450940a87ebf43791c404, type: 3}
+  m_Name: a weird ass cat
+  m_EditorClassIdentifier: 
+  itemName: a weird ass cat
+  itemColor: {r: 0, g: 0, b: 0, a: 0}
+  ItemSprite: {fileID: 21300000, guid: 8dcee7170c8594049bed9d8b8a13e26e, type: 3}
+  choice1Text: {fileID: 4900000, guid: d3d03269dce853048b175408182884b8, type: 3}
+  choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
+  choice2Text: {fileID: 4900000, guid: fd22807dd4dba8546b6dd76574660fd4, type: 3}
+  choice2Result: {fileID: 4900000, guid: b22980b13b8c2bf4ca08482f282893c3, type: 3}
+  choice3Text: {fileID: 4900000, guid: 9b66226f254db02459deb8b943d9f806, type: 3}
+  choice3Result: {fileID: 4900000, guid: 2e1d8cdb2cd35174b9aae3a82d7be113, type: 3}
+  choice1change: 0
+  choice2Change: 0
+  choice3change: 0
