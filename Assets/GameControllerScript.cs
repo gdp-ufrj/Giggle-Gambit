@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static System.Random;
 
 public class GameControllerScript : MonoBehaviour
 {
     public GameObject mainDialogueObj, buttonsObj,button1TextObj,button2TextObj,button3TextObj,itemImageObj,gachaScreenImageObj,gachaTextObj,gachaScreenObj;
-    public GameObject scoreDialogueObj;
+    public GameObject scoreDialogueObj,pauseButtonObj,pauseScreenObj,progBarObj;
     public GachaObjectScriptableObject[] gachaItems;
     public GachaObjectScriptableObject currentItem;
     public int oldManScore = 0;
     public int loseThreshold, WinThreshold;
     private bool gachaScreenOn = true;
+    private bool isPaused = false;
 
     private rollingTextTyperScript mainDialogueComponent;
     private Image gachaScreenImageComponent, itemImageComponent;
+    private Slider progBarComponent;
 
     private TextMeshProUGUI mainDialogueText,button1Text,button2Text,button3Text,gachaTextComponent,scoreDialogueText;
     // Start is called before the first frame update
@@ -31,6 +34,9 @@ public class GameControllerScript : MonoBehaviour
         button3Text = button3TextObj.GetComponent<TextMeshProUGUI>();
         scoreDialogueText = scoreDialogueObj.GetComponent<TextMeshProUGUI>();
         gachaTextComponent = gachaTextObj.GetComponent<TextMeshProUGUI>();
+        progBarComponent = progBarObj.GetComponent<Slider>();
+        progBarComponent.maxValue = WinThreshold;
+        progBarComponent.minValue = loseThreshold;
         gachaRoll();
         //gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
         //gachaScreenImageComponent.color = currentItem.itemColor;
@@ -40,7 +46,11 @@ public class GameControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse0))&&gachaScreenOn)
+        if (Input.GetKeyDown(KeyCode.Escape)&&!isPaused)
+        {
+            pauseButtonFunction();
+        }
+        if ((Input.GetKeyDown(KeyCode.Space))&&gachaScreenOn&&!isPaused)
         {
             button1Text.text = currentItem.choice1Text.text;
             button2Text.text = currentItem.choice2Text.text;
@@ -50,7 +60,7 @@ public class GameControllerScript : MonoBehaviour
             gachaScreenOn = false;
             mainDialogueComponent.finished = false;
         }
-        else if ((Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse0))&&mainDialogueComponent.finished&&!gachaScreenOn)
+        else if ((Input.GetKeyDown(KeyCode.Space))&&mainDialogueComponent.finished&&!gachaScreenOn&&!isPaused)
         {
             
             mainDialogueObj.SetActive(false);
@@ -61,7 +71,8 @@ public class GameControllerScript : MonoBehaviour
             //itemImageObj.GetComponent<Image>().color = currentItem.itemColor;
         }
 
-        scoreDialogueText.text = oldManScore.ToString();
+        //scoreDialogueText.text = oldManScore.ToString();
+        progBarComponent.value = oldManScore;
         if (oldManScore>=WinThreshold)
         {
             //insert win screen here
@@ -102,5 +113,29 @@ public class GameControllerScript : MonoBehaviour
         gachaScreenImageComponent.sprite = currentItem.ItemSprite;
         itemImageComponent.sprite = currentItem.ItemSprite;
         gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
+    }
+
+    public void pauseButtonFunction()
+    {
+        pauseButtonObj.SetActive(false);
+        pauseScreenObj.SetActive(true);
+        isPaused = true;
+    }
+
+    public void resumeButtonFunction()
+    {
+        pauseButtonObj.SetActive(true);
+        pauseScreenObj.SetActive(false);
+        isPaused = false;
+    }
+
+    public void toMenuButtonFunction()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void exitButtonFunction()
+    {
+        Application.Quit();
     }
 }
