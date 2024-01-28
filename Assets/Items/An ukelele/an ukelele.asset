@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: an ukulele
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: eda9b308e0b9c8a4fb6bf0ae0602d684, type: 3}
   choice1Text: {fileID: 4900000, guid: 1dbef01fb6924a24489b088879d6d96a, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 3e3d6eeac3501674fbd8ee9a57b0372d, type: 3}

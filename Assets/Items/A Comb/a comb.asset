@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: a comb
   itemColor: {r: 1, g: 1, b: 1, a: 1}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: eff3a5954b656054ba92dc30f6e75c78, type: 3}
   choice1Text: {fileID: 4900000, guid: 9385f4e64047f714aa7179aac47578c7, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 95ff2342fcf728b489d43708a97f403b, type: 3}

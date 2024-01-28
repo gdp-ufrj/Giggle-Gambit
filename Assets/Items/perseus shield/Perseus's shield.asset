@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Perseus's shield
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: bc72e676057feba43b5e5e7e223d7daf, type: 3}
   choice1Text: {fileID: 4900000, guid: 910a70a28c1617c439c832c99819b7d6, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 6c06d84394679954599d9c5b8066b5a3, type: 3}

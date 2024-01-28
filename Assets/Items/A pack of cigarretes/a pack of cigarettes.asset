@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: a pack of cigarettes
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: e7d98cf2dd0c1524ab029316f14f6fb4, type: 3}
   choice1Text: {fileID: 4900000, guid: df40c911f67c23a4682097f74e55aeb2, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: c07af17bbf02fbd449362e32db0ad823, type: 3}

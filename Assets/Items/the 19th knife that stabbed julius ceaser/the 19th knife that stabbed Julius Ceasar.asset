@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: the 19th knife that stabbed Julius Ceasar
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: e2ab00d34c69df34b89e3dd2e963d2cf, type: 3}
   choice1Text: {fileID: 4900000, guid: 9e7fe0f0efb0adf4baae7f1918a4515a, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: b16d60196a63386459d04d07ce01188b, type: 3}

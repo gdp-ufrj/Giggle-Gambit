@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,17 +10,25 @@ using static System.Random;
 public class GameControllerScript : MonoBehaviour
 {
     public GameObject mainDialogueObj, buttonsObj,button1TextObj,button2TextObj,button3TextObj,itemImageObj,gachaScreenImageObj,gachaTextObj,gachaScreenObj;
-    public GameObject scoreDialogueObj,pauseButtonObj,pauseScreenObj,progBarObj;
+    public GameObject scoreDialogueObj,pauseButtonObj,pauseScreenObj,progBarObj,OldManImgObject,clownImgObject;
     public GachaObjectScriptableObject[] gachaItems;
     public GachaObjectScriptableObject currentItem;
     public int oldManScore = 0;
     public int loseThreshold, WinThreshold;
+    public Sprite[] oldManSprites;
+    public Sprite[] clownSprites;
+    public string[] neutralResponses;
+    public string[] positiveResponses;
+    public string[] negativeResponses;
+    
     private bool gachaScreenOn = true;
     private bool isPaused = false;
 
     private rollingTextTyperScript mainDialogueComponent;
-    private Image gachaScreenImageComponent, itemImageComponent;
+    private Image gachaScreenImageComponent, itemImageComponent,oldManImageComponent,clownImageComponent;
     private Slider progBarComponent;
+    private int i;
+    private int errorValue = 1;
 
     private TextMeshProUGUI mainDialogueText,button1Text,button2Text,button3Text,gachaTextComponent,scoreDialogueText;
     // Start is called before the first frame update
@@ -28,6 +37,8 @@ public class GameControllerScript : MonoBehaviour
         mainDialogueComponent = mainDialogueObj.GetComponent<rollingTextTyperScript>();
         gachaScreenImageComponent = gachaScreenImageObj.GetComponent<Image>();
         itemImageComponent = itemImageObj.GetComponent<Image>();
+        oldManImageComponent = OldManImgObject.GetComponent<Image>();
+        clownImageComponent = clownImgObject.GetComponent<Image>();
         mainDialogueText=mainDialogueObj.GetComponent<TextMeshProUGUI>();
         button1Text = button1TextObj.GetComponent<TextMeshProUGUI>();
         button2Text = button2TextObj.GetComponent<TextMeshProUGUI>();
@@ -57,6 +68,7 @@ public class GameControllerScript : MonoBehaviour
             button3Text.text = currentItem.choice3Text.text;
             buttonsObj.SetActive(true);
             gachaScreenObj.SetActive(false);
+            oldManImageComponent.sprite = oldManSprites[0];
             gachaScreenOn = false;
             mainDialogueComponent.finished = false;
         }
@@ -73,12 +85,12 @@ public class GameControllerScript : MonoBehaviour
 
         //scoreDialogueText.text = oldManScore.ToString();
         progBarComponent.value = oldManScore;
-        if (oldManScore>=WinThreshold)
+        if (oldManScore>=WinThreshold&&mainDialogueComponent.finished)
         {
-            //insert win screen here
-        }else if (oldManScore <= loseThreshold)
+            SceneManager.LoadScene(3);
+        }else if (oldManScore <= loseThreshold&&mainDialogueComponent.finished)
         {
-            //insert lose screen here
+            SceneManager.LoadScene(2);
         }
 
 
@@ -90,16 +102,71 @@ public class GameControllerScript : MonoBehaviour
         switch (message)
         {
             case 1:
-                mainDialogueText.text = currentItem.choice1Result.text;
-                oldManScore += currentItem.choice1change;
+                //mainDialogueText.text = currentItem.choice1Result.text;
+                //oldManScore += currentItem.choice1change;
+                if (currentItem.choice1change<0)
+                {
+                    oldManScore -= errorValue;
+                    errorValue++;
+                    mainDialogueText.text = negativeResponses[Random.Range(0, negativeResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[1];
+                    
+                } else if (currentItem.choice1change>0)
+                {
+                    oldManScore += currentItem.choice1change;
+                    mainDialogueText.text = positiveResponses[Random.Range(0, positiveResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[2];
+                }
+                else
+                {
+                    oldManScore += currentItem.choice1change;
+                    mainDialogueText.text = neutralResponses[Random.Range(0, neutralResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[0];
+                }
                 break;
             case 2:
-                mainDialogueText.text = currentItem.choice2Result.text;
+                //mainDialogueText.text = currentItem.choice2Result.text;
                 oldManScore += currentItem.choice2Change;
+                if (currentItem.choice2Change<0)
+                {
+                    oldManScore -= errorValue;
+                    errorValue++;
+                    mainDialogueText.text = negativeResponses[Random.Range(0, negativeResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[1];
+                } else if (currentItem.choice2Change>0)
+                {
+                    oldManScore += currentItem.choice1change;
+                    mainDialogueText.text = positiveResponses[Random.Range(0, positiveResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[2];
+                }
+                else
+                {
+                    oldManScore += currentItem.choice1change;
+                    mainDialogueText.text = neutralResponses[Random.Range(0, neutralResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[0];
+                }
                 break;
             case 3:
-                mainDialogueText.text = currentItem.choice3Result.text;
+                //mainDialogueText.text = currentItem.choice3Result.text;
                 oldManScore += currentItem.choice3change;
+                if (currentItem.choice3change<0)
+                {
+                    oldManScore -= errorValue;
+                    errorValue++;
+                    mainDialogueText.text = negativeResponses[Random.Range(0, negativeResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[1];
+                } else if (currentItem.choice3change>0)
+                {
+                    oldManScore += currentItem.choice1change;
+                    mainDialogueText.text = positiveResponses[Random.Range(0, positiveResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[2];
+                }
+                else
+                {
+                    oldManScore += currentItem.choice1change;
+                    mainDialogueText.text = neutralResponses[Random.Range(0, neutralResponses.Length)];
+                    oldManImageComponent.sprite = oldManSprites[0];
+                }
                 break;
         }
         //gachaRoll();
@@ -109,10 +176,18 @@ public class GameControllerScript : MonoBehaviour
 
     public void gachaRoll()
     {
-        currentItem = gachaItems[Random.Range(0, gachaItems.Length)];
+        if (gachaItems.Length==0)
+        {
+            Application.Quit();
+        }
+        i = Random.Range(0, gachaItems.Length);
+        currentItem = gachaItems[i];
         gachaScreenImageComponent.sprite = currentItem.ItemSprite;
         itemImageComponent.sprite = currentItem.ItemSprite;
         gachaTextComponent.text = "I pulled " + currentItem.name + " from my bag!";
+        List<GachaObjectScriptableObject> itemList = gachaItems.ToList();
+        itemList.RemoveAt(i);
+        gachaItems = itemList.ToArray();
     }
 
     public void pauseButtonFunction()

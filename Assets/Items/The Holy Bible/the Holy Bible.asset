@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: the Holy Bible
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: c42cbff069ff364439962d3f33ec02e1, type: 3}
   choice1Text: {fileID: 4900000, guid: accd86da711564f43bf1a616763443b4, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: ee608dc9896fe1242a21db95721243ad, type: 3}

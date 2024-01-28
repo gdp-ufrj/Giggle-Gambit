@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: a horn
   itemColor: {r: 1, g: 1, b: 1, a: 1}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 83a5dc0554196ee429129cd820fb8d9c, type: 3}
   choice1Text: {fileID: 4900000, guid: 19b3d3a850054524483660871fd573f4, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 48180c05ea51244488a68dbc53b9251b, type: 3}

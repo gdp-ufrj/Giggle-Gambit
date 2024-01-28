@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: a Covid-19 test
   itemColor: {r: 1, g: 1, b: 1, a: 1}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: e02d88eb031ad5d41acef506d9829119, type: 3}
   choice1Text: {fileID: 4900000, guid: 31e1ee63e6286e94b8b056bb11c3fec4, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 8b861e8ab80520f41a82745508551973, type: 3}

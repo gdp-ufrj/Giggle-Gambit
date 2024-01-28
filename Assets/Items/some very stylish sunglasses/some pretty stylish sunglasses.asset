@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: some pretty stylish sunglasses
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 0db23d4358be9424e83714c5c0abf61b, type: 3}
   choice1Text: {fileID: 4900000, guid: 14ec901216fb8494b93dd6744f823c50, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 5115a51b6f7e75a498616b19d2d29db6, type: 3}

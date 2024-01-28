@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: some CIA classified documents
   itemColor: {r: 0, g: 0, b: 0, a: 0}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: f187b25aac9625a4b9b4521606dcfc85, type: 3}
   choice1Text: {fileID: 4900000, guid: 710cad3ca90ac8546a6a5eb14374c494, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: d059576c9ab96ba4099524f07b679572, type: 3}

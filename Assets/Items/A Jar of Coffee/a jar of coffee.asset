@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: a jar of coffee
   itemColor: {r: 1, g: 1, b: 1, a: 1}
-  ItemSprite: {fileID: 21300000, guid: 32d4099432d04a148b42cb6039a36f9a, type: 3}
+  ItemSprite: {fileID: 21300000, guid: d566198f109bcf34d84643a06d81075c, type: 3}
   choice1Text: {fileID: 4900000, guid: 467bb81127bb80748abfcfa724a7716e, type: 3}
   choice1Result: {fileID: 4900000, guid: dda1ea821cc30bc459a1e53880d0e204, type: 3}
   choice2Text: {fileID: 4900000, guid: 731fe7e54b8f6d04a9de5d3c6b7ece48, type: 3}
