@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 104595123}
   - component: {fileID: 104595122}
   - component: {fileID: 104595121}
+  - component: {fileID: 104595124}
   m_Layer: 5
   m_Name: Choice 2
   m_TagString: Untagged
@@ -492,6 +493,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104595119}
   m_CullTransparentMesh: 1
+--- !u!114 &104595124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104595119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1586970624
+      Data2: 1080822125
+      Data3: 1261009062
+      Data4: -1828118168
+    Path: event:/sfx/UI_joke_choice
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &140222474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1088,7 @@ GameObject:
   - component: {fileID: 497395710}
   - component: {fileID: 497395709}
   - component: {fileID: 497395708}
+  - component: {fileID: 497395711}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -1178,6 +1211,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497395706}
   m_CullTransparentMesh: 1
+--- !u!114 &497395711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497395706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1615445265
+      Data2: 1148880771
+      Data3: 1330071716
+      Data4: -1063531871
+    Path: event:/sfx/UI_menu_out
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1254,8 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420034}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1204,7 +1270,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1362,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1219797108
+      Data2: 1105455673
+      Data3: 770107271
+      Data4: -919772303
+    Path: event:/musics/gameplay_music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &555873108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1418,7 @@ GameObject:
   - component: {fileID: 555873112}
   - component: {fileID: 555873111}
   - component: {fileID: 555873110}
+  - component: {fileID: 555873113}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -1430,6 +1541,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555873108}
   m_CullTransparentMesh: 1
+--- !u!114 &555873113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555873108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1397221504
+      Data2: 1308899718
+      Data3: -362250057
+      Data4: 1314209409
+    Path: event:/sfx/UI_menu_in
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,6 +2374,7 @@ GameObject:
   - component: {fileID: 1029604626}
   - component: {fileID: 1029604625}
   - component: {fileID: 1029604624}
+  - component: {fileID: 1029604627}
   m_Layer: 5
   m_Name: Choice 3
   m_TagString: Untagged
@@ -2354,6 +2497,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029604622}
   m_CullTransparentMesh: 1
+--- !u!114 &1029604627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029604622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1586970624
+      Data2: 1080822125
+      Data3: 1261009062
+      Data4: -1828118168
+    Path: event:/sfx/UI_joke_choice
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1033283142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2653,7 @@ GameObject:
   - component: {fileID: 1065568033}
   - component: {fileID: 1065568032}
   - component: {fileID: 1065568031}
+  - component: {fileID: 1065568034}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -2601,6 +2776,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065568029}
   m_CullTransparentMesh: 1
+--- !u!114 &1065568034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065568029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1615445265
+      Data2: 1148880771
+      Data3: 1330071716
+      Data4: -1063531871
+    Path: event:/sfx/UI_menu_out
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1183742531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,6 +3162,7 @@ GameObject:
   - component: {fileID: 1745292035}
   - component: {fileID: 1745292034}
   - component: {fileID: 1745292033}
+  - component: {fileID: 1745292036}
   m_Layer: 5
   m_Name: Choice 1
   m_TagString: Untagged
@@ -3078,6 +3285,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745292031}
   m_CullTransparentMesh: 1
+--- !u!114 &1745292036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745292031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1586970624
+      Data2: 1080822125
+      Data3: 1261009062
+      Data4: -1828118168
+    Path: event:/sfx/UI_joke_choice
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1783651457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,6 +3404,7 @@ GameObject:
   - component: {fileID: 1792321743}
   - component: {fileID: 1792321742}
   - component: {fileID: 1792321741}
+  - component: {fileID: 1792321744}
   m_Layer: 5
   m_Name: Pause button
   m_TagString: Untagged
@@ -3287,6 +3526,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792321739}
   m_CullTransparentMesh: 1
+--- !u!114 &1792321744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792321739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -302937299
+      Data2: 1281813334
+      Data3: 1641034119
+      Data4: -1290223666
+    Path: event:/sfx/pause
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1800121520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,6 +3682,34 @@ MonoBehaviour:
   - Are you serious?
   - Offensively bad.
   - You should be hanged for that one.
+  negativeSound:
+    Guid:
+      Data1: -1290355658
+      Data2: 1172444072
+      Data3: -2142653526
+      Data4: 1700740009
+    Path: event:/sfx/sad_trombone
+  neutralSound:
+    Guid:
+      Data1: -1065117192
+      Data2: 1089635372
+      Data3: -1693661519
+      Data4: 481287645
+    Path: event:/sfx/cri_cri_cri
+  positiveSound:
+    Guid:
+      Data1: -1505698391
+      Data2: 1211160596
+      Data3: -1991743350
+      Data4: -162567962
+    Path: event:/sfx/ba_dum_tss
+  gameOverSound:
+    Guid:
+      Data1: 1532183329
+      Data2: 1207690441
+      Data3: 1469687723
+      Data4: 1096059689
+    Path: event:/sfx/game_over
 --- !u!4 &1800121522
 Transform:
   m_ObjectHideFlags: 0

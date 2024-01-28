@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,6 +32,11 @@ public class GameControllerScript : MonoBehaviour
     private int errorValue = 1;
 
     private TextMeshProUGUI mainDialogueText,button1Text,button2Text,button3Text,gachaTextComponent,scoreDialogueText;
+
+    [SerializeField] private EventReference negativeSound;
+    [SerializeField] private EventReference neutralSound;
+    [SerializeField] private EventReference positiveSound;
+    [SerializeField] private EventReference gameOverSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +96,7 @@ public class GameControllerScript : MonoBehaviour
             SceneManager.LoadScene(3);
         }else if (oldManScore <= loseThreshold&&mainDialogueComponent.finished)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(gameOverSound);
             SceneManager.LoadScene(2);
         }
 
@@ -106,6 +113,7 @@ public class GameControllerScript : MonoBehaviour
                 //oldManScore += currentItem.choice1change;
                 if (currentItem.choice1change<0)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(negativeSound);
                     oldManScore -= errorValue;
                     errorValue++;
                     mainDialogueText.text = negativeResponses[Random.Range(0, negativeResponses.Length)];
@@ -113,12 +121,14 @@ public class GameControllerScript : MonoBehaviour
                     
                 } else if (currentItem.choice1change>0)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(positiveSound);
                     oldManScore += currentItem.choice1change;
                     mainDialogueText.text = positiveResponses[Random.Range(0, positiveResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[2];
                 }
                 else
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(neutralSound);
                     oldManScore += currentItem.choice1change;
                     mainDialogueText.text = neutralResponses[Random.Range(0, neutralResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[0];
@@ -129,18 +139,21 @@ public class GameControllerScript : MonoBehaviour
                 oldManScore += currentItem.choice2Change;
                 if (currentItem.choice2Change<0)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(negativeSound);
                     oldManScore -= errorValue;
                     errorValue++;
                     mainDialogueText.text = negativeResponses[Random.Range(0, negativeResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[1];
                 } else if (currentItem.choice2Change>0)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(positiveSound);
                     oldManScore += currentItem.choice1change;
                     mainDialogueText.text = positiveResponses[Random.Range(0, positiveResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[2];
                 }
                 else
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(neutralSound);
                     oldManScore += currentItem.choice1change;
                     mainDialogueText.text = neutralResponses[Random.Range(0, neutralResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[0];
@@ -151,18 +164,21 @@ public class GameControllerScript : MonoBehaviour
                 oldManScore += currentItem.choice3change;
                 if (currentItem.choice3change<0)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(negativeSound);
                     oldManScore -= errorValue;
                     errorValue++;
                     mainDialogueText.text = negativeResponses[Random.Range(0, negativeResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[1];
                 } else if (currentItem.choice3change>0)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(positiveSound);
                     oldManScore += currentItem.choice1change;
                     mainDialogueText.text = positiveResponses[Random.Range(0, positiveResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[2];
                 }
                 else
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(neutralSound);
                     oldManScore += currentItem.choice1change;
                     mainDialogueText.text = neutralResponses[Random.Range(0, neutralResponses.Length)];
                     oldManImageComponent.sprite = oldManSprites[0];

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class cutsceneController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class cutsceneController : MonoBehaviour
     public Sprite[] frames;
 
     private int count = 0;
+    [SerializeField] private EventReference doorKnock;
+    [SerializeField] private EventReference doorOpen;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,11 @@ public class cutsceneController : MonoBehaviour
             count++;
             if (count==1)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(doorKnock);
                 dialogueText.GetComponent<TextMeshProUGUI>().text = "Alright, here we are, I’m so excited to meet the birthday boy! Funny, I don’t hear any kids or… Anyone else for that matter";
+            }else if (count==2)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(doorOpen);
             }
             if (count==3)
             {
